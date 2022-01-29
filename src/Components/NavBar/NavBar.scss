@@ -1,6 +1,6 @@
 .header {
   padding: 10px;
-  background-color: #1d1d1b;
+  background-color: $header-bc;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -11,11 +11,11 @@
   font-family: "Quicksand", sans-serif;
   font-size: 2rem;
   font-weight: 500;
-  color: #abb8c3;
+  color: $brand-colour;
 }
 
 .navbar-brand h1:hover {
-  color: #8c734b;
+  color: $hover-colour;
 }
 
 .header-nav {
@@ -34,10 +34,10 @@
   text-transform: uppercase;
   font-size: 1rem;
   font-weight: 400;
-  color: #484f4f;
+  color: $nav-link-colour;
   cursor: pointer;
 }
 
 .nav-link h3:hover {
-  color: #8c734b;
+  color: $hover-colour;
 }
