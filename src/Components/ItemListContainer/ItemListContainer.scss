@@ -1,8 +1,21 @@
 .item-list-container {
+  margin: 0px;
+  padding: 0px;
+  height: 100vw;
   background-color: $ppal-bc;
 }
 
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url(../../Media/hero_img.jpg);
+  height: 25%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
 .item-list-container h2 {
-  width: fit-content;
-  color: $ppal-txt-color;
+  color: $greetings-color;
 }

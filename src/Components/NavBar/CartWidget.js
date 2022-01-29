@@ -5,7 +5,7 @@ export const CartWidget = () => {
   return (
     <div className="shopping-cart">
       <IoCartOutline
-        style={{ color: "#abb8c3", fontSize: "1.5rem" }}
+        style={{ color: "#fefbf3", fontSize: "1.5rem" }}
         alt="shopping cart widget"
         className="nav-cart-icon"
       />
