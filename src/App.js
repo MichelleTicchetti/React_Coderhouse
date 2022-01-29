@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <NavBar />
-      <ItemListContainer greeting="Hola Coders!" />
+      <ItemListContainer greeting="Every day is Winesday" />
     </>
   );
 }
