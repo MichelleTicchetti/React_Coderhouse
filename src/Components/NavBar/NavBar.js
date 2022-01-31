@@ -7,9 +7,9 @@ export const NavBar = () => {
       <a className="navbar-brand" href="#">
         <h1>WINEHOUSE</h1>
       </a>
-      <nav class="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg navbar-light">
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavDropdown"
@@ -20,7 +20,7 @@ export const NavBar = () => {
           <span class="navbar-toggler-icon"></span>
         </button>
         <div
-          class="collapse navbar-collapse justify-content-end"
+          className="collapse navbar-collapse justify-content-end"
           id="navbarNavDropdown"
         >
           <p className="nav-link">
