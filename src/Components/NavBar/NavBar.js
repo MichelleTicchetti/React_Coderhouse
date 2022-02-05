@@ -28,7 +28,11 @@ export const NavBar = () => {
               <p>Espumantes</p>
             </Nav.Link>
           </Nav>
-          <CartWidget />
+          <Nav>
+            <Nav.Link href="#">
+              <CartWidget />
+            </Nav.Link>
+          </Nav>
         </Navbar.Collapse>
       </Navbar>
     </header>

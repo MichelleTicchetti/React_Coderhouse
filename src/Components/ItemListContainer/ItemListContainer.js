@@ -1,6 +1,7 @@
 import "../../Styles/_styles.scss";
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../Helpers/PedirDatos.js";
+import { queryData } from "../../Helpers/queryData";
+import { SpinnerLoading } from "../../Helpers/Loader/Loader";
 import { ItemList } from "../ItemList/ItemList.js";
 
 export const ItemListContainer = () => {
@@ -10,7 +11,7 @@ export const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    pedirDatos()
+    queryData()
       .then((res) => {
         setProductos(res);
       })
@@ -23,6 +24,6 @@ export const ItemListContainer = () => {
   }, []);
 
   return (
-    <>{loading ? <h2>Loading...</h2> : <ItemList productos={productos} />}</>
+    <>{loading ? <SpinnerLoading /> : <ItemList productos={productos} />}</>
   );
 };

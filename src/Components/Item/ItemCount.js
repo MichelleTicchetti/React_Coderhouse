@@ -1,10 +1,10 @@
-import { BotonCant } from "../ItemActionBtn/BotonCant";
+import { BtnCant } from "../Button/BtnCant";
 import { useState, useEffect } from "react";
 
 export const ItemCount = ({ initial, stock }) => {
   const [clicks, setClicks] = useState(initial);
 
-  const sumarClick = () => {
+  const addClick = () => {
     if (clicks < stock) {
       setClicks(clicks + 1);
     } else {
@@ -12,19 +12,27 @@ export const ItemCount = ({ initial, stock }) => {
     }
   };
 
-  const restarClick = () => {
+  const deductClick = () => {
     clicks < 1 ? setClicks(initial) : setClicks(clicks - 1);
   };
 
   useEffect(() => {
     console.log("Clicker actualizado");
+  }, [clicks]);
+
+  useEffect(() => {
+    console.log("Clicker montado");
+
+    return () => {
+      console.log("Clicker desmontado");
+    };
   }, []);
 
   return (
     <div className="cant-control">
-      <BotonCant click={sumarClick}>+</BotonCant>
+      <BtnCant click={addClick}>+</BtnCant>
       <p>{clicks}</p>
-      <BotonCant click={restarClick}>-</BotonCant>
+      <BtnCant click={deductClick}>-</BtnCant>
     </div>
   );
 };
