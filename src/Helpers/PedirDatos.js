@@ -1,9 +1,9 @@
-import { stock } from "../Data/Stock.js";
+import { stock } from "../Data/Stock";
 
-export const queryData = () => {
+export const pedirDatos = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       resolve(stock);
-    }, 100);
+    }, 1000);
   });
 };

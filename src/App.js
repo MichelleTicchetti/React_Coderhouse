@@ -1,15 +1,24 @@
-import "./Styles/_styles.scss";
-import { NavBar } from "./Components/NavBar/NavBar.js";
-import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer.js";
+import React from "react";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
+
+import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+import { NavBar } from "./Components/NavBar/NavBar";
+
 import "bootstrap/dist/css/bootstrap.min.css";
+import "./Styles/_styles.scss";
 
 function App() {
   return (
     <>
-      <header>
+      <BrowserRouter>
         <NavBar />
-      </header>
-      <ItemListContainer greeting="Every day is Winesday" />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/productos/:catId" element={<ItemListContainer />} />
+          <Route path="*" element={<Navigate to="/" />} />
+        </Routes>
+        {/*</Footer>*/}
+      </BrowserRouter>
     </>
   );
 }

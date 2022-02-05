@@ -4,6 +4,10 @@
   background-color: $header-bc;
 }
 
+.nav {
+  justify-content: space-around;
+}
+
 .navbar-brand {
   margin-left: 20px;
 
@@ -17,15 +21,17 @@
   }
 }
 
-.nav {
-  justify-content: space-evenly;
+.header-link-brand {
+  text-decoration: none;
 }
 
-.nav p {
-  margin: 0px;
-  margin-left: 5px;
+.header-link {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 5px;
   color: $nav-link-colour;
   font-family: "Roboto", sans-serif;
   font-weight: thin;
   text-align: center;
+  text-decoration: none;
 }

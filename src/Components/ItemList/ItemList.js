@@ -6,8 +6,8 @@ export const ItemList = ({ productos }) => {
   return (
     <Contenedor>
       <div className="row justify-content-center">
-        {productos.map((element) => (
-          <Item key={element.id} {...element} />
+        {productos.map((el) => (
+          <Item key={el.id} {...el} />
         ))}
       </div>
     </Contenedor>

@@ -16,18 +16,6 @@ export const ItemCount = ({ initial, stock }) => {
     clicks < 1 ? setClicks(initial) : setClicks(clicks - 1);
   };
 
-  useEffect(() => {
-    console.log("Clicker actualizado");
-  }, [clicks]);
-
-  useEffect(() => {
-    console.log("Clicker montado");
-
-    return () => {
-      console.log("Clicker desmontado");
-    };
-  }, []);
-
   return (
     <div className="cant-control">
       <BtnCant click={addClick}>+</BtnCant>
