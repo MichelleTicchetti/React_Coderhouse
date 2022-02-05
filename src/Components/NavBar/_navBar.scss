@@ -1,0 +1,31 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100&family=Roboto:wght@100&display=swap");
+
+.header {
+  background-color: $header-bc;
+}
+
+.navbar-brand {
+  margin-left: 20px;
+
+  & h1 {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 2rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: $brand-colour;
+  }
+}
+
+.nav {
+  justify-content: space-evenly;
+}
+
+.nav p {
+  margin: 0px;
+  margin-left: 5px;
+  color: $nav-link-colour;
+  font-family: "Roboto", sans-serif;
+  font-weight: thin;
+  text-align: center;
+}

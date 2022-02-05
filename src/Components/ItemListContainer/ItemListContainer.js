@@ -1,13 +1,28 @@
-import "../../Styles/Styles.scss";
+import "../../Styles/_styles.scss";
+import { useEffect, useState } from "react";
+import { pedirDatos } from "../../Helpers/PedirDatos.js";
+import { ItemList } from "../ItemList/ItemList.js";
 
-export const ItemListContainer = ({ greeting }) => {
+export const ItemListContainer = () => {
+  const [productos, setProductos] = useState([]);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    setLoading(true);
+
+    pedirDatos()
+      .then((res) => {
+        setProductos(res);
+      })
+      .catch((err) => {
+        console.log(err);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  }, []);
+
   return (
-    <section className="item-list-container">
-      <div className="hero-image">
-        <div className="hero-text">
-          <h2>{greeting}</h2>
-        </div>
-      </div>
-    </section>
+    <>{loading ? <h2>Loading...</h2> : <ItemList productos={productos} />}</>
   );
 };
