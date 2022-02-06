@@ -1,0 +1,28 @@
+.footer {
+  background-color: $footer-bc;
+  display: flex;
+  flex-direction: column;
+
+  & h1 {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 0.7rem;
+    font-weight: lighter;
+    color: $header-bc;
+  }
+}
+
+.footer-link-brand {
+  text-decoration: none;
+}
+
+.navbar-brand {
+  & h1 {
+    margin: 0px;
+    font-family: "Roboto", sans-serif;
+    font-size: 1rem;
+    font-weight: bolder;
+    text-transform: uppercase;
+    color: $brand-colour;
+  }
+}

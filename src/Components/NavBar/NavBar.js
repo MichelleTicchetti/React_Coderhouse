@@ -18,14 +18,14 @@ export const NavBar = () => {
             <NavLink to="/productos/blancos" className="header-link">
               Blancos
             </NavLink>
-            <NavLink to="/productos/naranjos" className="header-link">
-              Naranjos
-            </NavLink>
             <NavLink to="/productos/rosados" className="header-link">
               Rosados
             </NavLink>
             <NavLink to="/productos/tintos" className="header-link">
               Tintos
+            </NavLink>
+            <NavLink to="/productos/blends" className="header-link">
+              Blends
             </NavLink>
             <NavLink to="/productos/espumantes" className="header-link">
               Espumantes

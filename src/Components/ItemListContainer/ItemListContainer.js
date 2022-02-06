@@ -33,6 +33,14 @@ export const ItemListContainer = () => {
   }, [catId]);
 
   return (
-    <>{loading ? <SpinnerLoading /> : <ItemList productos={productos} />}</>
+    <>
+      {loading ? (
+        <SpinnerLoading />
+      ) : (
+        <div className="bg">
+          <ItemList productos={productos} />
+        </div>
+      )}
+    </>
   );
 };

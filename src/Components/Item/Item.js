@@ -15,7 +15,7 @@ export const Item = ({
   subcategoria,
 }) => {
   return (
-    <Card style={{ width: "16rem", margin: "5px" }}>
+    <Card style={{ width: "16rem", margin: "10px" }}>
       <Card.Img variant="top" src={img} style={{ marginTop: "10px" }} />
       <Card.Body>
         <Card.Title>{name}</Card.Title>

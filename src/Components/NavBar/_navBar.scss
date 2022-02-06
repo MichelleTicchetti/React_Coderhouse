@@ -5,7 +5,7 @@
 }
 
 .nav {
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .navbar-brand {
@@ -34,4 +34,8 @@
   font-weight: thin;
   text-align: center;
   text-decoration: none;
+}
+
+.header-link:hover {
+  color: $hover-colour;
 }
