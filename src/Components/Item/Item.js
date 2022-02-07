@@ -1,9 +1,9 @@
 import "../../Styles/_styles.scss";
 import { Card } from "react-bootstrap";
-import { Link } from "react-router-dom";
 import { ItemCount } from "../Item/ItemCount";
 import { BtnCart } from "../Button/BtnCart";
-import { Button } from "bootstrap";
+import { Btn } from "../Button/Btn";
+import { Link } from "react-router-dom";
 
 export const Item = ({
   id,
@@ -20,6 +20,9 @@ export const Item = ({
       <Card.Body>
         <Card.Title>{name}</Card.Title>
         <Card.Text>${price}</Card.Text>
+        <Link to={`/detail/${id}`}>
+          <Btn />
+        </Link>
         <ItemCount initial={0} stock={stock} />
       </Card.Body>
       <BtnCart />

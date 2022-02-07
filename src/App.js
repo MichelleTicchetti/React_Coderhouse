@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 
 import { ItemListContainer } from "./Components/ItemListContainer/ItemListContainer";
+import { ItemDetailContainer } from "./Components/ItemDetailContainer/ItemDetailContainer";
 import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Footer/Footer";
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="/" element={<Index />} />
           <Route path="/productos/:catId" element={<ItemListContainer />} />
           <Route path="/index" element={<Index />} />
+          <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer />
