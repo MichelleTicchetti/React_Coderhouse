@@ -11,7 +11,11 @@
 .navbar-brand {
   margin-left: 20px;
 
-  & h1 {
+  .header-link-brand {
+    text-decoration: none;
+  }
+
+  .header-link-brand h1 {
     margin: 0px;
     font-family: "Roboto", sans-serif;
     font-size: 2rem;
@@ -21,14 +25,11 @@
   }
 }
 
-.header-link-brand {
-  text-decoration: none;
-}
-
 .header-link {
   margin-left: 10px;
   margin-right: 10px;
   padding: 5px;
+  font-size: 1rem;
   color: $nav-link-colour;
   font-family: "Roboto", sans-serif;
   font-weight: thin;

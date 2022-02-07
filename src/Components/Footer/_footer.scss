@@ -1,29 +1,23 @@
-.footer {
+.footer-container {
   background-color: $footer-bc;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
+  align-items: baseline;
   bottom: 0px;
-
-  & h1 {
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 0.7rem;
-    font-weight: lighter;
-    color: $header-bc;
-  }
 }
 
-.footer-link-brand {
+.footer-link-brand a {
   text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  font-weight: lighter;
+  color: $brand-colour;
 }
 
-.navbar-brand {
-  & h1 {
-    margin: 0px;
-    font-family: "Roboto", sans-serif;
-    font-size: 1rem;
-    font-weight: bolder;
-    text-transform: uppercase;
-    color: $brand-colour;
-  }
+.copywrite a {
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-size: 0.8rem;
+  color: $brand-colour;
 }

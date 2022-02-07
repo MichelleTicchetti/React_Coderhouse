@@ -1,17 +1,16 @@
-import Navbar from "react-bootstrap/Navbar";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   return (
-    <footer>
-      <Navbar className="footer">
-        <Navbar.Brand>
-          <NavLink to="/" className="footer-link-brand">
-            <h1>Winehouse</h1>
-          </NavLink>
-        </Navbar.Brand>
-        <h1>by Michelle Ticchetti</h1>
-      </Navbar>
+    <footer className="footer-container">
+      <div className="footer-link-brand">
+        <Link to="/productos">Winehouse</Link>
+      </div>
+      <div className="copywrite">
+        <a href="https://github.com/MichelleTicchetti">
+          © 2022 by Michelle Ticchetti
+        </a>
+      </div>
     </footer>
   );
 };
