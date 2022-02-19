@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { pedirDatos } from "../../Helpers/PedirDatos";
+import { pedirDatos } from "../../Helpers/PedirDatos/PedirDatos";
 import { SpinnerLoading } from "../../Helpers/Loader/Loader";
 import { useParams } from "react-router-dom";
 import { ItemDetail } from "../ItemDetail/ItemDetail";

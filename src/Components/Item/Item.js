@@ -1,9 +1,10 @@
 import "../../Styles/_styles.scss";
 import { Card } from "react-bootstrap";
-import { ItemCount } from "../Item/ItemCount";
-import { BtnCart } from "../Button/BtnCart";
+import { ItemCount } from "../ItemCount/ItemCount";
 import { Btn } from "../Button/Btn";
 import { Link } from "react-router-dom";
+import { useContext, useState } from "react";
+import { CartContext } from "../../Context/CartContext";
 
 export const Item = ({
   id,
@@ -14,6 +15,25 @@ export const Item = ({
   categoria,
   subcategoria,
 }) => {
+  const [cantidad, setCantidad] = useState(0);
+  const { agregarAlCarrito, isInCart } = useContext(CartContext);
+
+  const handleAgregar = () => {
+    if (cantidad === 0) return;
+
+    if (!isInCart(id)) {
+      const addItem = {
+        id,
+        name,
+        price,
+        stock,
+        cantidad,
+      };
+
+      agregarAlCarrito(addItem);
+    }
+  };
+
   return (
     <Card style={{ width: "16rem", margin: "10px" }}>
       <Card.Img variant="top" src={img} style={{ marginTop: "10px" }} />
@@ -23,9 +43,22 @@ export const Item = ({
         <Link to={`/detail/${id}`}>
           <Btn />
         </Link>
-        <ItemCount initial={0} stock={stock} />
       </Card.Body>
-      <BtnCart />
+      {isInCart(id) ? (
+        <Link to="/cart" className="btn btn-success my-3">
+          Terminar mi compra
+        </Link>
+      ) : (
+        <>
+          <ItemCount max={stock} counter={cantidad} setCounter={setCantidad} />
+
+          <div className="btnCart-container d-grid gap-2">
+            <button class="btnCart" size="lg" onClick={handleAgregar}>
+              Agregar al carrito
+            </button>
+          </div>
+        </>
+      )}
     </Card>
   );
 };

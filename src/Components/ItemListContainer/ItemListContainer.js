@@ -1,7 +1,7 @@
 import "../../Styles/_styles.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { pedirDatos } from "../../Helpers/PedirDatos";
+import { pedirDatos } from "../../Helpers/PedirDatos/PedirDatos";
 import { SpinnerLoading } from "../../Helpers/Loader/Loader";
 import { ItemList } from "../ItemList/ItemList";
 

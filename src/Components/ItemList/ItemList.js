@@ -1,7 +1,6 @@
 import "../../Styles/_styles.scss";
 import { Contenedor } from "../../Helpers/Contenedor/Contenedor";
 import { Item } from "../Item/Item";
-import { Link } from "react-router-dom";
 
 export const ItemList = ({ productos }) => {
   return (

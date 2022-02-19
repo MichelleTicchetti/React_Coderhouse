@@ -2,7 +2,6 @@
 @import "./_global";
 @import "../Components/NavBar/navBar";
 @import "../Components/Footer/footer";
-@import "../Components/NavBar/cartWidget";
 @import "../Components/Pages/index";
 @import "../Components/Pages/products";
 @import "../Components/ItemListContainer/itemListContainer";
@@ -12,5 +11,6 @@
 @import "../Components/Button/btn";
 @import "../Components/Button/btnCant";
 @import "../Components/Button/btnCart";
-@import "../Components/Item/itemCount";
+@import "../Components/ItemCount/itemCount";
 @import "../Helpers/Loader/loader";
+@import "../Components/CartWidget/cartWidget";
