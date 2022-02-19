@@ -1,6 +1,6 @@
 .cart-widget {
   font-size: 1.5rem;
-  color: $btn-cart-bc;
+  color: $cart-bc;
   text-decoration: none;
   display: flex;
   flex-direction: row;
@@ -9,7 +9,7 @@
 }
 
 .cart-icon {
-  padding: 5px;
+  padding: 0px;
 }
 
 .cart-counter {
@@ -21,11 +21,11 @@
 }
 
 .cartCounter {
-  font-size: 1rem;
-  color: $btn-cart-bc;
+  font-size: 0.8rem;
+  color: $cart-bc;
 }
 
 .cartTotal {
-  font-size: 1rem;
-  color: $btn-cart-bc;
+  font-size: 0.8rem;
+  color: $cart-bc;
 }

@@ -15,7 +15,7 @@ export const CartWidget = () => {
         <span className="cartCounter">{cantidadCart()}</span>
       </div>
       <div className="cart-total">
-        <span className="cartTotal">${totalCart()}</span>
+        <span className="cartTotal">Total: ${totalCart()}</span>
       </div>
     </Link>
   );

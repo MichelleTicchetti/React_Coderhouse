@@ -46,7 +46,7 @@ export const Item = ({
       </Card.Body>
       {isInCart(id) ? (
         <Link to="/cart" className="btn btn-success my-3">
-          Terminar mi compra
+          Agregado al carrito
         </Link>
       ) : (
         <>

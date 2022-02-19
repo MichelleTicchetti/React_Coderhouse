@@ -5,12 +5,13 @@
   justify-content: center;
   align-items: baseline;
   bottom: 0px;
+  padding: 5px;
 }
 
 .footer-link-brand a {
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: lighter;
   color: $brand-colour;
 }
