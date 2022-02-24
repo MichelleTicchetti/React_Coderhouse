@@ -37,7 +37,7 @@ export const ItemListContainer = () => {
       {loading ? (
         <SpinnerLoading />
       ) : (
-        <div className="bg">
+        <div className="list-container">
           <ItemList productos={productos} />
         </div>
       )}

@@ -7,7 +7,7 @@ export const Index = () => {
       <div class="ppal-image">
         <div class="img-text">
           <h1>Winehouse</h1>
-          <Link to={`/productos/`}>
+          <Link to={`productos/`}>
             <button class="btnEnter">Soy mayor de 18 años</button>
           </Link>
         </div>

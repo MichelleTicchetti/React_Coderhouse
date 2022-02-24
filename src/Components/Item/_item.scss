@@ -22,3 +22,12 @@
 .card-body a {
   text-decoration: none;
 }
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 3px;
+  padding: 2px;
+}

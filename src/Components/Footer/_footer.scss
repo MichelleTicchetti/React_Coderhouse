@@ -4,8 +4,9 @@
   flex-direction: row;
   justify-content: center;
   align-items: baseline;
+  position: fixed;
   bottom: 0px;
-  padding: 5px;
+  width: 100%;
 }
 
 .footer-link-brand a {

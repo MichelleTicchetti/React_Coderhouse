@@ -47,9 +47,14 @@ export const ItemDetail = ({
         </Card.Body>
 
         {isInCart(id) ? (
-          <Link to="/cart" className="btn btn-success my-3">
-            Agregado al carrito
-          </Link>
+          <div className="btn-container">
+            <Link to="/cart">
+              <button class="btnCart">Ir al carrito</button>
+            </Link>
+            <Link to="/productos">
+              <button class="btnCart">Continuar comprando</button>
+            </Link>
+          </div>
         ) : (
           <>
             <ItemCount

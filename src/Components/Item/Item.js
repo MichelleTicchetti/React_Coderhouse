@@ -45,9 +45,11 @@ export const Item = ({
         </Link>
       </Card.Body>
       {isInCart(id) ? (
-        <Link to="/cart" className="btn btn-success my-3">
-          Agregado al carrito
-        </Link>
+        <div className="btn-container">
+          <Link to="/cart">
+            <button class="btnCart">Ir al carrito</button>
+          </Link>
+        </div>
       ) : (
         <>
           <ItemCount max={stock} counter={cantidad} setCounter={setCantidad} />

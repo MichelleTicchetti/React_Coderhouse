@@ -1,24 +1,26 @@
 import "../../Styles/_styles.scss";
-import ListGroup from "react-bootstrap/ListGroup";
+import { Link } from "react-router-dom";
 
 export const Products = () => {
   return (
-    <ListGroup>
-      <ListGroup.Item action href="/productos/blancos">
-        Blancos
-      </ListGroup.Item>
-      <ListGroup.Item action href="/productos/tintos">
-        Tintos
-      </ListGroup.Item>
-      <ListGroup.Item action href="/productos/rosados">
-        Rosados
-      </ListGroup.Item>
-      <ListGroup.Item action href="/productos/espumantes">
-        Espumantes
-      </ListGroup.Item>
-      <ListGroup.Item action href="/productos/blends">
-        Blends
-      </ListGroup.Item>
-    </ListGroup>
+    <div className="list-products ppal-image">
+      <h1>Nuestros Vinos</h1>
+      <hr />
+      <Link to="/productos/blancos">
+        <h2>Blancos</h2>
+      </Link>
+      <Link to="/productos/tintos">
+        <h2>Tintos</h2>
+      </Link>
+      <Link to="/productos/rosados">
+        <h2>Rosados</h2>
+      </Link>
+      <Link to="/productos/espumantes">
+        <h2>Espumantes</h2>
+      </Link>
+      <Link to="/productos/blends">
+        <h2>Blends</h2>
+      </Link>
+    </div>
   );
 };
