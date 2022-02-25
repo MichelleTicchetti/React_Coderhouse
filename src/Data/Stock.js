@@ -5,7 +5,7 @@ export const stock = [
     desc: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. ",
     price: 3120,
     img: require("../Media/Tintos/rutiniColeccionMalbec.jpg"),
-    stock: 3,
+    stock: 10,
     categoria: "tintos",
     subcategoria: "malbec",
   },

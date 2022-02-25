@@ -29,3 +29,8 @@
   font-size: 0.8rem;
   color: $cart-bc;
 }
+
+.cart-hidden {
+  opacity: 0;
+  visibility: hidden;
+}

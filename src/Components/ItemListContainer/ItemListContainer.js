@@ -1,9 +1,10 @@
 import "../../Styles/_styles.scss";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { pedirDatos } from "../../Helpers/PedirDatos/PedirDatos";
 import { SpinnerLoading } from "../../Helpers/Loader/Loader";
 import { ItemList } from "../ItemList/ItemList";
+import { db } from "../../Firebase/Config";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 export const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -16,16 +17,21 @@ export const ItemListContainer = () => {
   useEffect(() => {
     setLoading(true);
 
-    pedirDatos()
-      .then((res) => {
-        if (catId) {
-          setProductos(res.filter((el) => el.categoria === catId));
-        } else {
-          setProductos(res);
-        }
-      })
-      .catch((err) => {
-        console.log(err);
+    const productosRef = collection(db, "productos");
+    const q = catId
+      ? query(productosRef, where("categoria", "==", catId))
+      : productosRef;
+
+    getDocs(q)
+      .then((resp) => {
+        setProductos(
+          resp.docs.map((doc) => {
+            return {
+              id: doc.id,
+              ...doc.data(),
+            };
+          })
+        );
       })
       .finally(() => {
         setLoading(false);

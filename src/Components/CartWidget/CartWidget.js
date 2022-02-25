@@ -4,10 +4,13 @@ import { CartContext } from "../../Context/CartContext";
 import { IoCartOutline } from "react-icons/io5";
 
 export const CartWidget = () => {
-  const { cantidadCart, totalCart } = useContext(CartContext);
+  const { cantidadCart, totalCart, cart } = useContext(CartContext);
 
   return (
-    <Link to="/cart" className="cart-widget">
+    <Link
+      to="/cart"
+      className={`cart-widget ${cart.length === 0 ? "cart-hidden" : ""}`}
+    >
       <div className="cart-icon">
         <IoCartOutline alt="shopping cart widget" className="nav-cart-icon" />
       </div>

@@ -17,15 +17,17 @@ function App() {
       <CartProvider>
         <BrowserRouter>
           <NavBar />
+
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/productos/:catId" element={<ItemListContainer />} />
             <Route path="/index" element={<Index />} />
+            <Route path="*" element={<Navigate to="/" />} />
+            <Route path="/productos/:catId" element={<ItemListContainer />} />
             <Route path="/productos" element={<Products />} />
             <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
-            <Route path="*" element={<Navigate to="/" />} />
             <Route path="/cart" element={<Cart />} />
           </Routes>
+
           <Footer />
         </BrowserRouter>
       </CartProvider>
