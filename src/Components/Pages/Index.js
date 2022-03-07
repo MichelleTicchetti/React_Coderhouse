@@ -8,7 +8,7 @@ export const Index = () => {
         <div class="img-text">
           <h1>Winehouse</h1>
           <Link to={`productos/`}>
-            <button class="btnEnter">Soy mayor de 18 años</button>
+            <button class="btnEnter">Ver Productos</button>
           </Link>
         </div>
       </div>

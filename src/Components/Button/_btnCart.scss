@@ -6,7 +6,7 @@
 .btnCart {
   margin: 5px;
   padding: 5px;
-  background-color: $btn-cart-bc;
+  background-color: $btn-colour-2;
   border: none;
   border-radius: 5px;
   text-transform: uppercase;
@@ -14,4 +14,9 @@
   font-size: 0.8rem;
   font-weight: bolder;
   color: $txt-btn;
+  text-decoration: none;
+}
+
+.btnCart:hover {
+  color: white;
 }

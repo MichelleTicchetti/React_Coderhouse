@@ -8,6 +8,7 @@ import { NavBar } from "./Components/NavBar/NavBar";
 import { Footer } from "./Components/Footer/Footer";
 import { Index } from "./Components/Pages/Index";
 import { Products } from "./Components/Pages/Products";
+import { Checkout } from "./Components/Checkout/Checkout";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./Styles/_styles.scss";
 
@@ -26,6 +27,7 @@ function App() {
             <Route path="/productos" element={<Products />} />
             <Route path="/detail/:itemId" element={<ItemDetailContainer />} />
             <Route path="/cart" element={<Cart />} />
+            <Route path="/checkout" element={<Checkout />} />
           </Routes>
 
           <Footer />
